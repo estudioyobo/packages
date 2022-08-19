@@ -1,6 +1,12 @@
 {
   "name": "yobo-packages",
   "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "version": "changeset version",
+    "publish": "changeset publish"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
@@ -8,5 +14,9 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.24.3"
-  }
+  },
+  "devDependencies": {
+    "turbo": "^1.4.3"
+  },
+  "version": "0.1.0"
 }
