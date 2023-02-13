@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.3.1
+
+### Patch Changes
+
+- fix test
+
 ## 0.3.0
 
 ### Minor Changes
