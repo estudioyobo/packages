@@ -1,0 +1,23 @@
+.stepper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stepper__item {
+  --spacing: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+}
+
+.stepper__item:not(:last-child) {
+  flex: 1;
+}
+
+.stepper__item:not(:last-child):after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin-inline-end: var(--spacing);
+}
