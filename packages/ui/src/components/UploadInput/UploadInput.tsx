@@ -15,12 +15,12 @@ function UploadInput({ text, value, name, onChange }: UploadInputProps) {
       ref={ref}
       onDragOver={() => {
         if (ref?.current) {
-          ref.current.classList.add('border-green-500')
+          ref.current.classList.add('border-primary-500')
         }
       }}
       onDragLeave={() => {
         if (ref?.current) {
-          ref.current.classList.remove('border-green-500')
+          ref.current.classList.remove('border-primary-500')
         }
       }}
       onDrop={(ev) => {
@@ -49,7 +49,7 @@ function UploadInput({ text, value, name, onChange }: UploadInputProps) {
       <i className="material-symbols-outlined text-gray-600 text-2xl">
         cloud_upload
       </i>
-      <span>{text}</span>
+      {typeof text === 'string' ? <span>{text}</span> : null}
       <input
         type="image/*"
         value={value as string}

@@ -17,6 +17,7 @@ interface SidebarMenuProps {
   items: SidebarItem[]
   logo: string
   extra?: React.ReactNode
+  children?: React.ReactNode
 }
 
 const SidebarMenu: React.FC<SidebarMenuProps> = ({

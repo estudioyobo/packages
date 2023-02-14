@@ -4,6 +4,7 @@ interface RoundedCardProps {
   tag?: string
   className?: string
   small?: boolean
+  children?: React.ReactNode
 }
 
 const RoundedCard: React.FC<RoundedCardProps> = ({

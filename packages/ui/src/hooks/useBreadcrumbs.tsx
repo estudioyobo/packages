@@ -18,7 +18,9 @@ export const useBreadcrumbsConfig = () => {
   return { breadcrumbs, isCreationPage }
 }
 
-export const BreadcrumbsProvider: React.FC = ({ children }) => {
+export const BreadcrumbsProvider: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   const pathState = useState<string | undefined>()
   return (
     <BreadcrumbsContext.Provider value={pathState}>

@@ -1,5 +1,6 @@
 import { useCallback, useEffect } from 'react'
-import Tree, { useTreeState, HyperTreeViewMainProps } from 'react-hyper-tree'
+import Tree, { useTreeState } from 'react-hyper-tree'
+import type { HyperTreeViewMainProps, DefaultNodeProps } from 'react-hyper-tree'
 
 import { flatTree } from 'src/lib/dataTree'
 import type { TreeNode, TreeList } from 'src/lib/dataTree'
@@ -62,16 +63,16 @@ function TreeField<T extends TreeList>({
     }
   }, [handlers, selected])
   const renderNode = useCallback(
-    ({ node, onToggle, onSelect }) => (
+    ({ node, onToggle, onSelect }: DefaultNodeProps) => (
       <div
-        className="flex items-center mb-1 focus:border border-green-500"
+        className="flex items-center mb-1 focus:border border-primary-500"
         key={node.data.title}
       >
         <div
           onClick={onToggle}
           role="button"
           tabIndex={node.hasChildren() ? 0 : -1}
-          onKeyDown={(e) => {
+          onKeyDown={(e: any) => {
             if (e.code === 'Space' || e.code === 'Enter') {
               onToggle(e)
             }
@@ -95,17 +96,17 @@ function TreeField<T extends TreeList>({
           tabIndex={0}
           onKeyDown={(e) => {
             if (e.code === 'Enter') {
-              onChange?.(node)
-              onSelect(node)
+              onChange?.(node as any)
+              onSelect(node as any)
             }
           }}
           className={[
             'cursor-pointer h-10 flex items-center justify-between p-2 w-full bg-gray-50 hover:bg-gray-400/10 transition shadow-sm',
-            node.isSelected() ? 'border-l-4 border-green-400' : '',
+            node.isSelected() ? 'border-l-4 border-primary-400' : '',
           ].join(' ')}
           onClick={() => {
-            onChange?.(node)
-            onSelect(node)
+            onChange?.(node as any)
+            onSelect(node as any)
           }}
         >
           <div className="flex flex-col items-stretch">

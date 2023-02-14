@@ -13,7 +13,8 @@ export interface ISelectableActions {
   onDelete: (selected: number[]) => void
 }
 
-export interface SelectableActionsProps<T> extends ISelectableActions {
+export interface SelectableActionsProps<T extends FieldValues>
+  extends ISelectableActions {
   children: React.ReactNode
   formMethods: UseFormReturn<T>
   hasSelection: boolean
@@ -38,7 +39,7 @@ const SelectableActions = <T extends FieldValues>({
         <div className="flex gap-2 items-center">
           <CheckboxField
             name="selectAll"
-            className="accent-green-500 cursor-pointer"
+            className="accent-primary-500 cursor-pointer"
           />
           <Label
             name="selectAll"

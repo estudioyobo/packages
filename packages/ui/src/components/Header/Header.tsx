@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({
             onClick={() => {
               back()
             }}
-            className="inline-flex items-center mr-4 transition hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:ring-2 focus:ring-green-500 p-1 rounded-md"
+            className="inline-flex items-center mr-4 transition hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:ring-2 focus:ring-primary-500 p-1 rounded-md"
           >
             <i className="material-symbols-outlined text-3xl">chevron_left</i>
           </button>
@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="flex-1 flex justify-end">
           <Link
             to={newRoute}
-            className="focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 rounded-full"
+            className="focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-full"
           >
             <span className="hidden md:contents text-purple-600">
               <Button type="Ghost" tabIndex={-1}>

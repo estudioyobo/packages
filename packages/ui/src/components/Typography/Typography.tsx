@@ -13,6 +13,7 @@ interface TypographyProps {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
   type?: keyof typeof TypographyType
   className?: string
+  children: React.ReactNode
 }
 
 const Typography: React.FC<TypographyProps> = ({

@@ -29,6 +29,7 @@ interface RowProps {
   selectable?: SelectableRow
   onClick?: () => void
   isHoverable?: boolean
+  children?: React.ReactNode
 }
 
 interface DraggableSpec {

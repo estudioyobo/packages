@@ -50,7 +50,7 @@ const Dropdown = ({
             <button
               key={key}
               className={`cursor-pointer w-full border-gray-100 rounded-t border-b hover:bg-gray-100 ${
-                isSelected ? 'bg-green-50' : ''
+                isSelected ? 'bg-primary-50' : ''
               }`}
               onClick={(e) => {
                 e.preventDefault()

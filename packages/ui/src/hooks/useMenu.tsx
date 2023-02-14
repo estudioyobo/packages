@@ -15,7 +15,9 @@ const MenuContext = createContext<{
 
 export const useMenu = () => useContext(MenuContext)
 
-export const MenuProvider: React.FC = ({ children }) => {
+export const MenuProvider: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const a = useLocation()
   const toggle = useCallback(() => setIsOpen((value) => !value), [setIsOpen])

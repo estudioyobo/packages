@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.4.0
+
+### Minor Changes
+
+- set primary color
+
 ## 0.3.1
 
 ### Patch Changes

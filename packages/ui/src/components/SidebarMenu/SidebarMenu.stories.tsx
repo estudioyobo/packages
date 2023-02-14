@@ -1,3 +1,4 @@
+import { LocationProvider } from '@redwoodjs/router'
 import SidebarMenu from './SidebarMenu'
 
 export const empty = () => {
@@ -13,4 +14,13 @@ export const empty = () => {
   )
 }
 
-export default { title: 'Components/SidebarMenu' }
+export default {
+  title: 'Components/SidebarMenu',
+  decorators: [
+    (Story: any) => (
+      <LocationProvider>
+        <Story />
+      </LocationProvider>
+    ),
+  ],
+}

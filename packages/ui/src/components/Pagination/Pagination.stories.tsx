@@ -1,3 +1,6 @@
+import { ParamsProvider } from '@redwoodjs/router'
+import { LocationProvider } from '@redwoodjs/router/dist/location'
+import { RouterContextProvider } from '@redwoodjs/router/dist/router-context'
 import Pagination from './Pagination'
 
 export const noPagination = () => {
@@ -16,4 +19,17 @@ export const ellipse = () => {
   )
 }
 
-export default { title: 'Components/Pagination' }
+export default {
+  title: 'Components/Pagination',
+  decorators: [
+    (Story: any) => (
+      <LocationProvider>
+        <RouterContextProvider>
+          <ParamsProvider>
+            <Story />
+          </ParamsProvider>
+        </RouterContextProvider>
+      </LocationProvider>
+    ),
+  ],
+}

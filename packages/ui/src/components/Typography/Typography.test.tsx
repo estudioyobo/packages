@@ -8,7 +8,7 @@ import Typography from './Typography'
 describe('Typography', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<Typography />)
+      render(<Typography>Typography</Typography>)
     }).not.toThrow()
   })
 })

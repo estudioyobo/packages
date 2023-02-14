@@ -24,8 +24,8 @@ const Switch: React.FC<SwitchProps> = ({
           onChange={onChange}
           name={name}
           className={`${
-            checked ? 'bg-green-400' : 'bg-gray-200'
-          } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500`}
+            checked ? 'bg-primary-400' : 'bg-gray-200'
+          } relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500`}
         >
           <span
             className={`${

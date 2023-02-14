@@ -56,7 +56,7 @@ const Pagination = ({ count, page: currentPage, route }: PaginationProps) => {
         aria-current="page"
         className={
           i == currentPage
-            ? 'z-10 bg-green-400 text-black relative inline-flex items-center px-4 p-2 text-sm font-medium rounded-md'
+            ? 'z-10 bg-primary-400 text-black relative inline-flex items-center px-4 p-2 text-sm font-medium rounded-md'
             : 'bg-gray-100 text-black hover:bg-gray-50 relative inline-flex items-center px-4 py-2 text-sm font-medium rounded-md'
         }
       >

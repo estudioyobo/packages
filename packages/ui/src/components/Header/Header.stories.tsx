@@ -1,3 +1,4 @@
+import { LocationProvider } from '@redwoodjs/router'
 import Header from './Header'
 
 export const generated = () => {
@@ -9,4 +10,13 @@ export const cta = () => {
   )
 }
 
-export default { title: 'Components/Header' }
+export default {
+  title: 'Components/Header',
+  decorators: [
+    (Story: any) => (
+      <LocationProvider>
+        <Story />
+      </LocationProvider>
+    ),
+  ],
+}

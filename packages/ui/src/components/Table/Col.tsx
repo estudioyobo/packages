@@ -18,6 +18,7 @@ interface ColProps {
   grow?: boolean
   selectable?: SelectableRow
   dragRef?: ConnectDragSource
+  children?: React.ReactNode
 }
 
 const Col: React.FC<ColProps> = ({
@@ -45,7 +46,7 @@ const Col: React.FC<ColProps> = ({
               type="checkbox"
               value={selectable.id}
               onClick={(e) => e.stopPropagation()}
-              className="bg-gray-400 accent-green-500 cursor-pointer"
+              className="bg-gray-400 accent-primary-500 cursor-pointer"
               {...selectable.registerInput('item', {
                 // setValueAs: (value) => (value.length === 0 ? '' : value),
               })}
