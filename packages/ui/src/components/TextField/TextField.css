@@ -1,7 +1,7 @@
 .pure-material-textfield-outlined {
   /* --pure-material-primary-rgb: 22, 163, 74; */
-  --pure-material-primary-rgb: 74, 222, 128;
-  --pure-material-safari-helper1: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  /* --pure-material-primary-rgb: 74, 222, 128; */
+  --pure-material-safari-helper1: theme(colors.primary.500);
   position: relative;
   display: inline-block;
   padding-top: 6px;
@@ -31,7 +31,7 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  caret-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  caret-color: theme(colors.primary.500);
   transition: border 0.2s, box-shadow 0.2s;
 }
 .pure-material-textfield-outlined.pure-material-textfield-outlined--small > input,
@@ -155,7 +155,7 @@
 /* Focus */
 .pure-material-textfield-outlined > input:focus,
 .pure-material-textfield-outlined > textarea:focus {
-  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  border-color: theme(colors.primary.500);
   border-top-color: transparent;
   box-shadow: inset 1px 0 var(--pure-material-safari-helper1), inset -1px 0 var(--pure-material-safari-helper1), inset 0 -1px var(--pure-material-safari-helper1);
   outline: none;
@@ -163,7 +163,7 @@
 
 .pure-material-textfield-outlined > input:focus + span,
 .pure-material-textfield-outlined > textarea:focus + span {
-  color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  color: theme(colors.primary.500);
 }
 
 .pure-material-textfield-outlined > input:focus + span::before,
