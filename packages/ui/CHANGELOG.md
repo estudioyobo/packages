@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.4.1
+
+### Patch Changes
+
+- fix primary color in TextField
+
 ## 0.4.0
 
 ### Minor Changes
