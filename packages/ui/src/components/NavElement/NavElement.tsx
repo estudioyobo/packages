@@ -26,6 +26,7 @@ const NavElement = ({
     ) : (
       <NavLink
         to={link}
+        matchSubPaths
         activeClassName="bg-primary-400 text-black"
         className="px-5 py-2 rounded-3xl flex-1 focus:outline-none focus:ring-white focus:ring-offset-2 focus:ring-1"
       >
