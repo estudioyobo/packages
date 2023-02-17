@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.5.0
+
+### Minor Changes
+
+- match subpaths in nav links
+
 ## 0.4.1
 
 ### Patch Changes
