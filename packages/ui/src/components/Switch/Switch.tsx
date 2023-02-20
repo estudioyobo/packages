@@ -4,6 +4,7 @@ interface SwitchProps {
   name: string
   label: string
   checked?: boolean
+  disabled?: boolean
   onChange: (value: boolean) => void
 }
 
@@ -12,6 +13,7 @@ const Switch: React.FC<SwitchProps> = ({
   label,
   checked = false,
   onChange,
+  disabled,
 }) => {
   return (
     <HSwitch.Group>
@@ -22,6 +24,7 @@ const Switch: React.FC<SwitchProps> = ({
         <HSwitch
           checked={checked}
           onChange={onChange}
+          disabled={disabled}
           name={name}
           className={`${
             checked ? 'bg-primary-400' : 'bg-gray-200'
