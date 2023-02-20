@@ -16,3 +16,11 @@ export { default as TextField } from './TextField/TextField'
 export { default as TreeField } from './TreeField/TreeField'
 export { default as Typography } from './Typography/Typography'
 export { default as UploadInput } from './UploadInput/UploadInput'
+export {
+  default as Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  ModalProvider,
+  useModal,
+} from './Modal/Modal'
