@@ -1,5 +1,12 @@
 # @yobo/ui
 
+## 0.6.0
+
+### Minor Changes
+
+- Feature: Modal component
+  Fix: Switch disbled property
+
 ## 0.5.0
 
 ### Minor Changes
