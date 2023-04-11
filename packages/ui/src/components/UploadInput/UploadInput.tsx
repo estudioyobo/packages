@@ -51,7 +51,8 @@ function UploadInput({ text, value, name, onChange }: UploadInputProps) {
       </i>
       {typeof text === 'string' ? <span>{text}</span> : null}
       <input
-        type="image/*"
+        type="file"
+        accept="image/*"
         value={value as string}
         onChange={({ target: { validity, files } }) => {
           if (files) {
