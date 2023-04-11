@@ -60,8 +60,9 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
           <ul className="p-4 mt-20">
             {items
               .filter((item) => item.show)
-              .map((item) => (
+              .map((item, i) => (
                 <NavElement
+                  key={i}
                   label={item.label}
                   isDisabled={item.disabled}
                   link={item.link}
