@@ -1,5 +1,18 @@
 # @yobo/ui
 
+## 0.6.3
+
+### Patch Changes
+
+- fix: UploadInput error and ring when value
+
+## 0.6.1
+
+### Patch Changes
+
+- fix: UploadInput now accepts files when the input is clicked
+- fix: add missing key to SidebarMenu
+
 ## 0.6.0
 
 ### Minor Changes
