@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.6.4
+
+### Patch Changes
+
+- fix: aligned logo in SidebarMenu also in small screens
+
 ## 0.6.3
 
 ### Patch Changes
