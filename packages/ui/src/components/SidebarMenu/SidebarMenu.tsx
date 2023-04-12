@@ -71,7 +71,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
               ))}
           </ul>
         </div>
-        <img src={logo} alt="YOBO Logo" className="w-2/3 self-center" />
+        <img src={logo} alt="YOBO Logo" className="w-2/3 self-center mx-auto" />
       </nav>
       <main className="min-h-screen w-full h-screen bg-white px-2 md:px-16 md:pt-20 overflow-y-auto">
         {children}
