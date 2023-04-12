@@ -1,8 +1,15 @@
+import { useState } from 'react'
 import UploadInput from './UploadInput'
 
 export const generated = () => {
+  const [state, setState] = useState<string | File>()
   return (
-    <UploadInput value="" text="Aqui tu texto" name="" onChange={() => null} />
+    <UploadInput
+      value={state}
+      text="Aqui tu texto"
+      name=""
+      onChange={setState}
+    />
   )
 }
 

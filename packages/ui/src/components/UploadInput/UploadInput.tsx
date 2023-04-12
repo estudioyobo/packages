@@ -44,7 +44,9 @@ function UploadInput({ text, value, name, onChange }: UploadInputProps) {
           }
         }
       }}
-      className="relative overflow-hidden rounded-xl bg-gray-200 py-3 px-5 max-w-[184px] text-center flex flex-col items-center focus:bg-gray-300 hover:bg-gray-300 border-2"
+      className={`relative overflow-hidden rounded-xl bg-gray-200 py-3 px-5 max-w-[184px] text-center flex flex-col items-center focus:bg-gray-300 hover:bg-gray-300 border-2 ${
+        value ? 'border-primary-500' : ''
+      }`}
     >
       <i className="material-symbols-outlined text-gray-600 text-2xl">
         cloud_upload
@@ -53,7 +55,6 @@ function UploadInput({ text, value, name, onChange }: UploadInputProps) {
       <input
         type="file"
         accept="image/*"
-        value={value as string}
         onChange={({ target: { validity, files } }) => {
           if (files) {
             const [file] = Array.from(files)
