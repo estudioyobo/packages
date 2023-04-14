@@ -41,6 +41,7 @@ export function appStatusFormatter(state: IAppStatus) {
 
 const SUBSCRIPTION_NAMES = {
   incomplete: { text: 'Incompleta', color: 'bg-gray-200' },
+  paused: { text: 'Pausada', color: 'bg-gray-200' },
   incomplete_expired: { text: 'Incompleta expirada', color: 'bg-purple-200' },
   trialing: { text: 'En prueba', color: 'bg-yellow-200' },
   past_due: { text: 'Vencida', color: 'bg-yellow-300' },
