@@ -4,6 +4,7 @@ import {
   RegisterOptions,
   FieldError,
   PasswordField,
+  EmailField,
 } from '@redwoodjs/forms'
 import { forwardRef } from 'react'
 
@@ -12,6 +13,7 @@ import './TextField.css'
 interface TextFieldProps {
   name: string
   label: string
+  email?: boolean
   wrapperClassName?: string
   validation?: RegisterOptions
   defaultValue?: string
@@ -25,6 +27,7 @@ const TextField = forwardRef(
     {
       name,
       label,
+      email,
       validation,
       disabled,
       password,
@@ -34,7 +37,7 @@ const TextField = forwardRef(
     }: TextFieldProps,
     ref: React.ForwardedRef<HTMLInputElement>
   ) => {
-    const Field = password ? PasswordField : RTextField
+    const Field = password ? PasswordField : (email ? EmailField : RTextField) 
     return (
       <div className={wrapperClassName}>
         <Label
