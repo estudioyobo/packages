@@ -49,7 +49,6 @@ const TextField = forwardRef(
           <Field
             name={name}
             validation={validation}
-            itemType=''
             disabled={disabled}
             placeholder=" "
             defaultValue={defaultValue}
