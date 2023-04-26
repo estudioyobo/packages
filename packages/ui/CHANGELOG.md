@@ -1,5 +1,17 @@
 # @yobo/ui
 
+## 0.6.6
+
+### Patch Changes
+
+- TextField can be an email Field
+
+## 0.6.5
+
+### Patch Changes
+
+- added paused as a possible subscription state
+
 ## 0.6.4
 
 ### Patch Changes
