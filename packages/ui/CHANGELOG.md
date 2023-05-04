@@ -1,5 +1,12 @@
 # @yobo/ui
 
+## 0.6.7
+
+### Patch Changes
+
+- Fix: Switch label as optional
+  Fix: pass TextField rest props to the Input
+
 ## 0.6.6
 
 ### Patch Changes
