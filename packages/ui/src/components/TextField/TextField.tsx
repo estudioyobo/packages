@@ -34,10 +34,11 @@ const TextField = forwardRef(
       size,
       defaultValue,
       wrapperClassName,
+      ...rest
     }: TextFieldProps,
     ref: React.ForwardedRef<HTMLInputElement>
   ) => {
-    const Field = password ? PasswordField : (email ? EmailField : RTextField) 
+    const Field = password ? PasswordField : email ? EmailField : RTextField
     return (
       <div className={wrapperClassName}>
         <Label
@@ -53,6 +54,7 @@ const TextField = forwardRef(
             placeholder=" "
             defaultValue={defaultValue}
             ref={ref}
+            {...rest}
           />
           <span>{label}</span>
         </Label>
