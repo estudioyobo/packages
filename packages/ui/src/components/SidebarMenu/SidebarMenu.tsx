@@ -18,6 +18,8 @@ interface SidebarMenuProps {
   logo: string
   extra?: React.ReactNode
   children?: React.ReactNode
+  bg?: string
+  text?: string
 }
 
 const SidebarMenu: React.FC<SidebarMenuProps> = ({
@@ -25,6 +27,8 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   items,
   logo,
   extra,
+  bg = 'bg-black',
+  text = 'text-white',
 }) => {
   const { isOpen, toggle } = useMenu()
   const ref = useRef(null)
@@ -36,7 +40,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   return (
     <div className="flex">
       <nav
-        className={`md:flex flex-col py-8 justify-between w-64 max-w-xs h-screen overflow-y-auto bg-black text-white border-r inset-0 z-[9999] absolute md:relative transition ${
+        className={`md:flex flex-col py-8 justify-between w-64 max-w-xs h-screen overflow-y-auto ${bg} ${text} border-r inset-0 z-[9999] absolute md:relative transition ${
           isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
         ref={ref}
