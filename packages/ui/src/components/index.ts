@@ -1,3 +1,4 @@
+export { default as Accordion } from './Accordion/Accordion'
 export { default as Button } from './Button/Button'
 export { default as CreditCard } from './CreditCard/CreditCard'
 export { default as Header } from './Header/Header'

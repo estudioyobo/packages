@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-import { Switch } from '@yobo/ui'
+import Switch from 'src/components/Switch/Switch'
 
 interface AccordionProps {
   items: SectionData[]
-  selection: number
+  selection: number | null
   selectionId: string
-  setSelection: (value: number) => void
+  setSelection: (value: number | null) => void
 }
 
 interface Item {

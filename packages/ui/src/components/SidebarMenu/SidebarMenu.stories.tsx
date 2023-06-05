@@ -2,7 +2,7 @@ import { LocationProvider } from '@redwoodjs/router'
 import SidebarMenu from './SidebarMenu'
 import { MenuProvider, useMenu } from 'src/hooks/useMenu'
 
-export const empty = ({ bg, text }) => {
+export const empty = ({ bg, text }: { bg: string; text: string }) => {
   const { toggle } = useMenu()
   return (
     <div className="flex">
