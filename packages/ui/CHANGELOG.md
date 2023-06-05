@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.7.0
+
+### Minor Changes
+
+- accordion
+
 ## 0.6.7
 
 ### Patch Changes
