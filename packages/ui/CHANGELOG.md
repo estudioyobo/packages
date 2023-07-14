@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.8.0
+
+### Minor Changes
+
+- SideDialog
+
 ## 0.7.0
 
 ### Minor Changes
@@ -11,7 +17,7 @@
 ### Patch Changes
 
 - Fix: Switch label as optional
-  Fix: pass TextField rest props to the Input
+- Fix: pass TextField rest props to the Input
 
 ## 0.6.6
 
