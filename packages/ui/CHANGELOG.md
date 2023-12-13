@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.9.0
+
+### Minor Changes
+
+- Prompt in modal
+
 ## 0.8.0
 
 ### Minor Changes
