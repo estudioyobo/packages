@@ -12,8 +12,17 @@ interface HeaderProps {
   title: string
 }
 
+
+
+interface InputProps{
+    value: string;
+    setValue: React.Dispatch<React.SetStateAction<string>>;
+  }
+
+
 interface BodyProps {
   message: string
+  prompt?: boolean
 }
 
 interface AlertButton {
@@ -24,6 +33,7 @@ interface AlertButton {
 
 interface FooterProps {
   buttons: AlertButton[]
+  value?: string
 }
 
 type IModal = HeaderProps & BodyProps & Partial<FooterProps>
@@ -59,9 +69,9 @@ export const ModalBody: React.FC<BodyProps> = ({ message }) => {
   return <main className="p-4">{message}</main>
 }
 
-export const ModalFooter: React.FC<FooterProps> = ({ buttons }) => {
-  function getType(value: AlertButton['style']): ButtonProps['type'] {
-    switch (value) {
+export const ModalFooter: React.FC<FooterProps> = ({ buttons, value }) => {
+  function getType(type: AlertButton['style']): ButtonProps['type'] {
+    switch (type) {
       case 'default':
         return 'Base'
       case 'cancel':
@@ -79,7 +89,7 @@ export const ModalFooter: React.FC<FooterProps> = ({ buttons }) => {
         {buttons.map((button, i) => (
           <Button
             key={i}
-            onClick={() => button.onPress?.()}
+            onClick={() => button.onPress?.(value)}
             type={getType(button.style)}
           >
             {button.text}
@@ -87,6 +97,13 @@ export const ModalFooter: React.FC<FooterProps> = ({ buttons }) => {
         ))}
       </div>
     </footer>
+  )
+}
+export const ModalInput: React.FC<InputProps> = ({ setValue,value }) => {
+  return (
+    <div className='flex justify-center'>
+      <input className='border-b rounded-lg p-2 bg-blue-50' value={value} onChange={(e)=>setValue(e.target.value)}></input>
+    </div>
   )
 }
 
@@ -103,13 +120,15 @@ export const useModal = () => {
 export const ModalProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
   const [modal, setModal] = useState<IModal | null>(null)
   const closeModal = useCallback(() => setModal(null), [setModal])
+  const [prompt, setPrompt] = useState<string>('')
   return (
     <ModalContext.Provider value={{ setModal, closeModal }}>
       {children}
       <Modal isOpen={!!modal}>
         <ModalHeader title={modal?.title ?? ''} />
         <ModalBody message={modal?.message ?? ''} />
-        {modal?.buttons && <ModalFooter buttons={modal.buttons}></ModalFooter>}
+        {modal?.prompt && <ModalInput value={prompt} setValue={setPrompt} />}
+        {modal?.buttons && <ModalFooter buttons={modal.buttons} value={prompt}></ModalFooter>}
       </Modal>
     </ModalContext.Provider>
   )
