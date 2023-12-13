@@ -1,4 +1,4 @@
-const url = `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_ID}/image/upload`
+const url = `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD}/image/upload`
 
 type Eager = {
   transformation: string
@@ -51,9 +51,11 @@ export function uploadPhoto(file: string | Blob): Promise<UploadPhotoResponse> {
   return new Promise((resolve) => {
     const formData = new FormData()
     formData.append('file', file)
-    formData.append('api_key', '516217463117496')
+    if (process.env.CLOUDINARY_API_KEY)
+      formData.append('api_key', process.env.CLOUDINARY_API_KEY)
     formData.append('timestamp', Date.now().toString())
-    formData.append('upload_preset', 'test_catalogs')
+    if (process.env.CLOUDINARY_UPLOAD_PRESET)
+      formData.append('upload_preset', process.env.CLOUDINARY_UPLOAD_PRESET)
     // formData.append("signature", signData.signature);
     fetch(url, {
       method: 'POST',

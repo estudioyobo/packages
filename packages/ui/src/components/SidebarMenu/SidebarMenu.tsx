@@ -18,6 +18,8 @@ interface SidebarMenuProps {
   logo: string
   extra?: React.ReactNode
   children?: React.ReactNode
+  bg?: string
+  text?: string
 }
 
 const SidebarMenu: React.FC<SidebarMenuProps> = ({
@@ -25,6 +27,8 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   items,
   logo,
   extra,
+  bg = 'bg-black',
+  text = 'text-white',
 }) => {
   const { isOpen, toggle } = useMenu()
   const ref = useRef(null)
@@ -36,7 +40,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   return (
     <div className="flex">
       <nav
-        className={`md:flex flex-col py-8 justify-between w-64 max-w-xs h-screen overflow-y-auto bg-black text-white border-r inset-0 z-[9999] absolute md:relative transition ${
+        className={`md:flex flex-col py-8 justify-between w-64 max-w-xs h-screen overflow-y-auto ${bg} ${text} border-r inset-0 z-[9999] absolute md:relative transition ${
           isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
         ref={ref}
@@ -71,7 +75,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
               ))}
           </ul>
         </div>
-        <img src={logo} alt="YOBO Logo" className="w-2/3 self-center" />
+        <img src={logo} alt="YOBO Logo" className="w-2/3 self-center mx-auto" />
       </nav>
       <main className="min-h-screen w-full h-screen bg-white px-2 md:px-16 md:pt-20 overflow-y-auto">
         {children}

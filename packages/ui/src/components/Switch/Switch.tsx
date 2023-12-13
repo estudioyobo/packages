@@ -2,7 +2,7 @@ import { Switch as HSwitch } from '@headlessui/react'
 
 interface SwitchProps {
   name: string
-  label: string
+  label?: string
   checked?: boolean
   disabled?: boolean
   onChange: (value: boolean) => void
@@ -18,9 +18,11 @@ const Switch: React.FC<SwitchProps> = ({
   return (
     <HSwitch.Group>
       <div className="flex items-center">
-        <HSwitch.Label className="mr-4" htmlFor={name}>
-          {label}
-        </HSwitch.Label>
+        {label && (
+          <HSwitch.Label className="mr-4" htmlFor={name}>
+            {label}
+          </HSwitch.Label>
+        )}
         <HSwitch
           checked={checked}
           onChange={onChange}

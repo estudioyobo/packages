@@ -1,5 +1,42 @@
 # @yobo/ui
 
+## 0.8.0
+
+### Minor Changes
+
+- SideDialog
+
+## 0.7.0
+
+### Minor Changes
+
+- accordion
+
+## 0.6.7
+
+### Patch Changes
+
+- Fix: Switch label as optional
+- Fix: pass TextField rest props to the Input
+
+## 0.6.6
+
+### Patch Changes
+
+- TextField can be an email Field
+
+## 0.6.5
+
+### Patch Changes
+
+- added paused as a possible subscription state
+
+## 0.6.4
+
+### Patch Changes
+
+- fix: aligned logo in SidebarMenu also in small screens
+
 ## 0.6.3
 
 ### Patch Changes
