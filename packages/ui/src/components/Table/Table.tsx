@@ -59,11 +59,10 @@ const Table = <T extends ItemSpec>({
                     ? { ...draggable, id: item.id, position: i }
                     : undefined
                 }
-                onClick={() => onClick?.(item)}
                 isHoverable={Boolean(onClick)}
               >
-                {columns.map(({ key, grow, formatter }) => (
-                  <Col key={key as string} grow={grow}>
+                {columns.map(({ key, grow, formatter ,clickable= true}) => (
+                  <Col key={key as string} grow={grow} onClick={() => clickable && onClick?.(item)} >
                     {formatter ? (
                       formatter(item[key], item)
                     ) : (
