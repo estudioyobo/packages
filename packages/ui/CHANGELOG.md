@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.10.0
+
+### Minor Changes
+
+- make column unclickable
+
 ## 0.9.0
 
 ### Minor Changes
