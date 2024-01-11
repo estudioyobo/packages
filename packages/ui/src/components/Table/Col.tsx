@@ -10,6 +10,7 @@ export type Column<T> = {
     name: string
     grow?: boolean
     formatter?: Formatter<T, T[K]>
+    clickable?: boolean
   }
 }[keyof T]
 
@@ -19,6 +20,7 @@ interface ColProps {
   selectable?: SelectableRow
   dragRef?: ConnectDragSource
   children?: React.ReactNode
+  onClick?: () => void
 }
 
 const Col: React.FC<ColProps> = ({
@@ -27,9 +29,11 @@ const Col: React.FC<ColProps> = ({
   selectable,
   dragRef,
   grow,
+  onClick
 }) => {
   return (
     <td
+    onClick={onClick}
       className={`px-6 py-3 text-gray-700 ${className ?? ''} ${
         grow && 'w-full'
       }`}
