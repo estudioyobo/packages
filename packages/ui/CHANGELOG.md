@@ -1,5 +1,11 @@
 # @yobo/ui
 
+## 0.10.2
+
+### Patch Changes
+
+- nav active class
+
 ## 0.10.0
 
 ### Minor Changes
