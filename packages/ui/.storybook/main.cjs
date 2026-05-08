@@ -5,7 +5,10 @@ const tsconfigPaths = require('vite-tsconfig-paths')
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
-  framework: '@storybook/react',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
   core: {
     builder: '@storybook/builder-vite',
   },
@@ -21,11 +24,8 @@ module.exports = {
 
     return mergeConfig(config, {
       ...userConfig,
-      // manually specify plugins to avoid conflict
       plugins: [
         tsconfigPaths.default({
-          // My tsconfig.json isn't simply in viteConfig.root,
-          // so I've passed an explicit path to it:
           projects: [path.resolve(path.dirname(__dirname), 'tsconfig.json')],
         }),
       ],
