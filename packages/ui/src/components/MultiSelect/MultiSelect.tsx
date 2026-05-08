@@ -33,7 +33,7 @@ const Dropdown = ({
   selected,
   onClickOutside,
 }: DropdownProps) => {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement | null>(null)
   useOnClickOutside(ref, onClickOutside)
   return (
     <div

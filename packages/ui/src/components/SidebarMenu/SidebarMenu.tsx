@@ -31,7 +31,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   text = 'text-white',
 }) => {
   const { isOpen, toggle } = useMenu()
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement | null>(null)
   useOnClickOutside(ref, () => {
     if (isOpen) {
       toggle()

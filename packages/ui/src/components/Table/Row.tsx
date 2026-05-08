@@ -151,7 +151,7 @@ const Row: React.FC<RowProps> = ({
       }}
     >
       {(id || selectable?.id) && (
-        <Col dragRef={id ? dragRef : undefined} selectable={selectable}></Col>
+        <Col dragRef={id ? dragRef as unknown as React.Ref<HTMLDivElement> : undefined} selectable={selectable}></Col>
       )}
       {children}
     </tr>

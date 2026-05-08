@@ -24,7 +24,7 @@ export default {
   decorators: [
     (Story: any) => (
       <LocationProvider>
-        <RouterContextProvider>
+        <RouterContextProvider routes={{ pathRouteMap: {}, namedRoutesMap: {}, hasRootRoute: false } as any}>
           <ParamsProvider>
             <Story />
           </ParamsProvider>
