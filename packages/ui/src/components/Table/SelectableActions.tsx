@@ -63,7 +63,7 @@ const SelectableActions = <T extends FieldValues>({
               onClick={onDuplicateSubmit}
               className="inline-flex gap-2 text-blue-500 hover:text-blue-700"
             >
-              Dupicar selección
+              Duplicar selección
               <i className="material-symbols-outlined">content_copy</i>
             </button>
           </Transition.Child>

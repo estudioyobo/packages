@@ -1,5 +1,3 @@
-import type { ConnectDragSource } from 'react-dnd'
-
 import type { SelectableRow } from './Row'
 
 type Formatter<T, V> = (value: V, item: T) => React.ReactNode
@@ -18,7 +16,7 @@ interface ColProps {
   className?: string
   grow?: boolean
   selectable?: SelectableRow
-  dragRef?: ConnectDragSource
+  dragRef?: React.Ref<HTMLDivElement>
   children?: React.ReactNode
   onClick?: () => void
 }

@@ -1,8 +1,8 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryFn, Meta } from '@storybook/react'
 
 import { Button } from './Button'
 
-export const generated: ComponentStory<typeof Button> = () => {
+export const generated: StoryFn<typeof Button> = () => {
   return (
     <div className="grid gap-2">
       <div>
@@ -50,9 +50,9 @@ export const generated: ComponentStory<typeof Button> = () => {
 export default {
   title: 'Components/Button',
   component: Button,
-} as ComponentMeta<typeof Button>
+} as Meta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = (args) => (
+const Template: StoryFn<typeof Button> = (args: any) => (
   <Button {...args}>Button</Button>
 )
 
