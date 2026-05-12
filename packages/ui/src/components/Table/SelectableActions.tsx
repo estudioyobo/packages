@@ -40,6 +40,7 @@ const SelectableActions = <T extends FieldValues>({
           <CheckboxField
             name="selectAll"
             className="accent-primary-500 cursor-pointer"
+            crossOrigin=""
           />
           <Label
             name="selectAll"

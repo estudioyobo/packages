@@ -1,5 +1,23 @@
 # @yobo/ui
 
+## 0.10.2
+
+### Patch Changes
+
+- nav active class
+
+## 0.10.0
+
+### Minor Changes
+
+- make column unclickable
+
+## 0.9.0
+
+### Minor Changes
+
+- Prompt in modal
+
 ## 0.8.0
 
 ### Minor Changes
